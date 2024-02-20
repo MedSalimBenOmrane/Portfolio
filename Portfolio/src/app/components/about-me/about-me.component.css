@@ -17,7 +17,7 @@ h1 {
   line-height: 0.7;
   position: absolute;
   right: 0;
-  top: 7%;
+  top: 11%;
   text-transform: uppercase;
   font-weight: 800;
   transform: translateY(-50%);
@@ -44,6 +44,8 @@ h1 {
   margin-top: 40px;
 }
 .cv {
+  margin-top: 40px;
+  margin-left: 70px;
   overflow: hidden;
   display: inline-block;
   line-height: 1.4;
@@ -107,7 +109,7 @@ h1 {
   padding-top: 30px;
 }
 #container {
-  min-height: 100vh;
+  min-height: 70vh auto;
   height: auto;
   padding-top: 2%;
 }
