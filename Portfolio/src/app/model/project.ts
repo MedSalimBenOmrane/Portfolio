@@ -6,7 +6,8 @@ export class project {
     links:string;
     description:string;
     pathImage:string[];
-    pathVid:string[];
+    pathVid:string;
+    
 
     constructor(title="",
         category="",
@@ -15,7 +16,7 @@ export class project {
         links="",
         description="",
         pathImage: string[] = [],
-        pathVid: string[] = [],) 
+        pathVid="") 
         
         {
       this.title=title;
@@ -25,7 +26,7 @@ export class project {
       this.links=links;
       this.description=description;
       this.pathImage=pathImage;
-      this.pathVid=pathVid
+      this.pathVid=pathVid;
     }
   
   }

@@ -11,35 +11,28 @@ export class ExperiencePageComponent {
   constructor() {
     this.exps = [
       new Expinfo(
-        'exp1',
-        '2022-2023',
-        'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit'
+        'GAME Developer Internship - Lanterns Studios',
+        'Summer-2023',
+        'Developed a dynamic 3D Tic tac toe multiplayer game using Unreal Engine 5 .'
       ),
       new Expinfo(
-        'exp2',
-        '2022-2023',
-        'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit'
+        'INSAT - Engineering Degree ',
+        '2020-2025',
+        'Engineering Degree in Computer networks and telecommunications .'
       ),
       new Expinfo(
-        'exp3',
-        '2022-2023',
-        'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit'
+        'Luxolor Boats (PART TIME JOB)',
+        '2023 - Present',
+        'Production Methods Engineer: Defines, organizes, and optimizes processes and production resources for an industrial site .'
       ),
       new Expinfo(
-        'exp4',
-        '2022-2023',
-        'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit'
+        'Baccalaureate Degree',
+        'august -2020',
+        'Baccalaureate Degree in Computer Science .'
       ),
-      new Expinfo(
-        'exp5',
-        '2022-2023',
-        'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit'
-      ),
-      new Expinfo(
-        'exp6',
-        '2022-2023',
-        'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit'
-      ),
+
+
+
     ];
   }
 }

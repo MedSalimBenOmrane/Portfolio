@@ -1,3 +1,5 @@
+
+
 <div class="container" id="container">
     <h1>MY <span>PORTFOLIO</span></h1>
     <span class="title-bg">WORKS</span>
@@ -32,40 +34,60 @@
                                 <span class="ft-wt-600 uppercase">{{project.period}}</span>
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
-                                <b class="key">Language :</b>
+                                <b class="key">tools : </b>
                                 <span class="ft-wt-600 uppercase">{{project.stack}}</span>
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
                                 <b class="key">Preview :</b>
                                 <a class="preview-link" target="_blank" rel="noopener noreferrer nofollow"
                                     href="{{project.links}}"
-                                    style="cursor: none; color: #ffb400">{{project.links}}</a>
+                                    style="cursor: none; color: #ffffff">link</a>
                             </div>
                         </div>
                         <div class="row pt-3">
                             <div id="containerdesc">
                             <p>
-                                <b class="key">Description: </b> {{project.description}}
+                                <b class="key">Description: </b> {{project.description}} 
+
+
                             </p>
                         </div>
+                        <div class="row">
+                            <button class="cv" (click)="downloadPdf(project.title)">
+                                 Download Repport
+                              <span class="icon"><i class="bi bi-download"></i></span>
+                            </button>
+                          </div>
+                        
                         </div>
                     </div>
                     <div class="col-7" style="padding: 30px ;padding-bottom:40px;">
                         <ngb-carousel>
 
 
-
+                            <ng-template  ngbSlide >
+                                <div class="picsum-img-wrapper">
+                                    <div *ngIf="project.pathVid=='https://www.youtube.com/embed/k3qTqowV-IA?si=nDMDqDgUL76ETPS3'">
+                                    <iframe  height="375px" width="100%" style="  border-radius: 24px;" src="https://www.youtube.com/embed/k3qTqowV-IA?si=nDMDqDgUL76ETPS3"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <div *ngIf="project.pathVid=='https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p'">
+                                    <iframe  height="375px" width="100%" style="  border-radius: 24px;" src="https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p" allowfullscreen></iframe>
+                                </div>
+                                <div *ngIf="project.pathVid=='https://www.youtube.com/embed/uJyh1AMuxHc?si=b3cQgKbAqcaqZHIM'">
+                                    <iframe  height="375px" width="100%" style="  border-radius: 24px;" src="https://www.youtube.com/embed/uJyh1AMuxHc?si=b3cQgKbAqcaqZHIM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                                
+                            </ng-template>
                               <ng-template class="images" ngbSlide *ngFor="let image of project.pathImage">
                                 <div class="picsum-img-wrapper">
                                     <img src="assets/projects image/{{project.title}}/{{image}}" alt="Random first slide" />
                                 </div>
-                                <div class="carousel-caption">
-                                    <h3> First slide label</h3>
-                                    <p>
-                                        Nulla vitae elit libero, a pharetra augue mollis interdum.
-                                    </p>
-                                </div>
+                    
                             </ng-template>
+                        
+
+                            
 
                            <!-- <ng-template class="images" ngbSlide>
                                 <div class="picsum-img-wrapper">
