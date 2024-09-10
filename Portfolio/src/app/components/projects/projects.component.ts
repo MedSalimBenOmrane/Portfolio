@@ -12,6 +12,28 @@ export class ProjectsComponent {
   path1:string="https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p";
   constructor(private modalService: NgbModal) {
     this.projects = [
+      new project(
+        'PDF-CHATBOT',
+        'IA',
+        'Streamlit, PyPDF2, and LangChain,Google Generative AI ,FAISS ',
+        '2024',
+        'https://github.com/MedSalimBenOmrane/PDF-CHATBOT',
+        ' This project involves creating a PDF chatbot using Streamlit, PyPDF2, and LangChain to read and analyze PDF content. It utilizes Google Generative AI for embeddings and conversational capabilities, and FAISS for efficient vector search. The chatbot can extract text from PDFs, split it into manageable chunks, and answer user questions based on the extracted information.',
+        ['thumbnail.jpg','image 1.jpg'],
+        "https://www.youtube.com/embed/LbtcI1qF45Y?si=UZ4scBkNilv2ky8H"
+        
+      ),
+      new project(
+        'Personality Detection system',
+        'IA',
+        'XLM ROBERTa - VIT -Streamlit -Selinium',
+        '2024',
+        'https://github.com/MedSalimBenOmrane/-Multimodal-Personality-Detection-system-PFA-',
+        ' Designed a platform to scrape Instagram profiles using the provided URL, collecting posts, images, and captions for analysis.Utilized XLM-RoBERTa for text analysis and ViT for image feature extraction to predict user personalities. Generated visual representations of predicted personality traits. ',
+        ['thumbnail.jpg',],
+        "https://www.youtube.com/embed/-mkCC6rJm-8?si=kVBp7AmM2vBfqKVu"
+        
+      ),
 
       new project(
         'Event Hub',

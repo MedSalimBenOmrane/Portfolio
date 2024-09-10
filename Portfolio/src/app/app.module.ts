@@ -12,6 +12,9 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { TestComponent } from './components/test/test.component';
+import { SkillsListComponent } from './components/skills-list/skills-list.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { ProjectCardComponent } from './components/projects/project-card/project
     PortfolioComponent,
     ProjectsComponent,
     ProjectCardComponent,
+    TestComponent,
+    SkillsListComponent,
+    ContactUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],

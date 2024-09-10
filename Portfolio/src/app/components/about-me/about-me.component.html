@@ -1,182 +1,86 @@
 <div class="container" id="container">
-  <h1 style="margin: 0 37%">ABOUT <span>ME</span></h1>
-  <span style="margin: 0 35%" class="title-bg">Resume</span>
+  <h1>ABOUT <span>ME</span></h1>
+  <span class="title-bg">RESUME</span>
 
 
 
   <div class="row " >
-    <div class="col-lg-6 md-12" style="margin-top: 35px;">
-      <div class="row info">
-      <h2>PERSONAL INFO</h2>
+    <div class="info col-lg-12 md-12" style="margin-top: 5vh;">
+      <div class="row">
+      <h2 >PERSONAL INFO</h2>
       </div>
       <div class="row">
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-3 col-sm-12">
           <div class="item">
             <span class="title">First Name:</span>
             <span class="value">Ben Omrane</span>
           </div>
     
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-3 col-sm-12">
           <div class="item">
             <span class="title"> Last Name: </span>
             <span class="value"> Mohamed Salim </span>
           </div>
         </div> 
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
+      
+    
+        <div class="col-lg-3 col-sm-12">
           <div class="item">
             <span class="title">  Nationality:  </span>
             <span class="value">  Tunisian </span>
           </div>
         </div>  
-        <div class="col-lg-6 col-sm-12">
-          <div class="item">
-            <span class="title">  Address: </span>
-            <span class="value"> Tunis </span>
-          </div>
-        </div> 
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
+        
+        <div class="col-lg-3 col-sm-12">
           <div class="item">
             <span class="title">  Age  </span>
             <span class="value"> 22 Years </span>
           </div>
-        </div>  
-        <div class="col-lg-6 col-sm-12">
+        </div> 
+      </div>
+      <div class="row">
+         
+        <div class="col-lg-3 col-sm-12">
           <div class="item">
             <span class="title"> Phone </span>
             <span class="value"> +216 51 181 080 </span>
           </div>
         </div>
-      </div>
-      <div class="row">
+      
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title">  Languages:  </span>
+            <span class="value"> English, French, Arabic  </span>
+          </div>
+        </div> 
         <div class="col-lg-6 col-sm-12">
           <div class="item">
             <span class="title">  Email:  </span>
             <span class="value"> mohamedsalim.benomrane@insat.ucar.tn </span>
           </div>
         </div>  
-        <div class="col-lg-6 col-sm-12">
-          <div class="item">
-            <span class="title">  Languages:  </span>
-            <span class="value"> English, French, Arabic  </span>
-          </div>
-        </div>  
+         
       </div>
     
      
- 
-      <div class="row">
-        <button class="cv" (click)="downloadPdf()">
-          Download Resume
-          <span class="icon"><i class="bi bi-download"></i></span>
-        </button>
+      <div class="row" >
+        <div class="button" (click)="downloadPdf()">
+          <a href="#" class="anchor">
+            <span>Download CV</span>
+          </a>
+        </div>
       </div>
+      
     </div>
 
-
-    <div class="col-6 skills">
-      <div class="row info">
-      <div class="label">
-        <h2>SKILLS</h2>
-      </div>
-    </div>
-      <div class="row" style="margin-top: 15px;">
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\angular.png" class="skill" /></div>
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\nest.png" class="skill" /></div>
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"> <img src="assets\skills\spring.png" class="skill" /></div>
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\java.png" class="skill" /></div>
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-       
-      </div>
+    <app-skills-list></app-skills-list>
 
 
-
-      <div class="row " style="margin-top: 25px;">
-        <div class="col-lg-3 col-sm-6">
-          <div  style="text-align: center">
-            <div class="skill"><img src="assets\skills\azure.webp" class="skill" /></div>
-          </div>
     
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div  style="text-align: center">
-            <div class="skill"><img src="assets\skills\python.png" class="skill" /></div>
-          </div>
-   
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\sql.png" class="skill" /></div>
-          </div>
- 
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\symfony.jpg" class="skill" /></div>
-          </div>
-   
-        </div>
-      </div>
 
 
-        <div class="row" style="margin-top: 25px;">
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\c.png" class="skill" /></div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\js.png" class="skill" /></div>
-          </div>
-  
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\Arduino.png" class="skill" /></div>
-          </div>
-
-        </div>
-        <div class="col-lg-3 col-sm-4">
-          <div class="row" style="text-align: center">
-            <div class="skill"><img src="assets\skills\unreal.png" class="skill" /></div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+       
+    
   </div>
 </div>

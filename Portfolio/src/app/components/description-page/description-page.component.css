@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Exo+2');
-body {
+/*body {
 
 
   overflow: hidden;
@@ -55,13 +55,13 @@ body {
   transform: translateY(-50%);
   margin-left: 35%;
   color: white;
-  width: auto; /* Vous pouvez ajuster la largeur ici selon vos besoins */
+  width: auto; 
 }
 
 .content h1 {
   width: 100%;
-  font-size: 38px; /* Réglez la taille de police selon vos besoins */
-  line-height: 48px; /* Réglez la hauteur de ligne selon vos besoins */
+  font-size: 38px; 
+  line-height: 48px; 
   color: #ffb400;
   padding-left: 4%;
   font-weight: 700;
@@ -73,6 +73,73 @@ body {
 }
 .content P {
   width: 80%;
+}
+*/
+
+body {
+  background-color: #000000;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.container1 {
+  padding-top: 6%;
+  padding-left: 6%;
+}
+
+.container2 {
+  background-image: url("./salim3.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+  overflow: hidden;
+  width: 28%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_container {
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 35%;
+  color: white;
+  width: auto;
+}
+
+.content h1 {
+  font-size: 38px;
+  line-height: 48px;
+  color: #ffb400;
+  padding-left: 4%;
+  font-weight: 700;
+}
+
+.content span {
+  color: white;
+}
+
+.content p {
+  width: 80%;
+}
+
+.social-icons {
+  margin: 20px 0;
+  padding-left: 25%;
+  color: white;
 }
 
 .border {
@@ -214,3 +281,66 @@ body {
   transition: all 1s ease-in-out;
   object-fit: cover;
 }
+
+
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .container2 {
+    width: 60%;
+    height: 200px;
+    margin: 18%;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 100px; /* Gap between items */
+  }
+
+  .content {
+    display: inline;
+    position: unset;
+  }
+
+  .content p {
+    font-size: 12px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .social-icons {
+    padding-left: 10%;
+  }
+  .content h1 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffb400;
+    padding-left: 4%;
+    font-weight: 700;
+  }
+}
+
+.typing-demo {
+  width: 29ch;
+  animation: typing 4s steps(32), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  font-family: monospace;
+
+}
+
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+} 

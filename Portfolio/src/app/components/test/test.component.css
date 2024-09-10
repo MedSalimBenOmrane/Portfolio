@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+/* Réinitialiser certains styles de base */
+
+
+.page_container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 15%;
+}
+
+
+
+.avatar {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto; /* Centrer l'avatar sur petits écrans */
+    position: relative;
+}
+
+.avatar img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content {
+    color: white;
+}
+
+.content h1 {
+    font-size: 38px;
+    color: #ffb400;
+    font-weight: 700;
+}
+
+.content span {
+    color: white;
+}
+
+.content p {
+    width: 100%;
+}
+
+.social-icons {
+    margin: 20px 0;
+    color: white;
+}
+
+.social-icons a {
+    border: 1px solid rgb(255, 180, 0);
+    border-radius: 20%;
+    box-shadow: 0px 0px 15px rgba(255, 179, 0, 0.336);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 6px;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 20px rgba(255, 179, 0, 0.336);
+}
+
+/* Typing animation */
+.typing-demo {
+    width: 29ch;
+    animation: typing 4s steps(32), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-family: monospace;
+    
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+.avatar {
+    
+    height: 250px;
+    position: relative;
+    width: 250px;
+  }
+  
+  .avatar img {
+    border-radius: 9999px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  @keyframes cycle-colors {
+    0% { border-color: hsl(0, 100%, 50%); }
+    25% { border-color: hsl(90, 100%, 50%); }
+    50% { border-color: hsl(180, 100%, 50%); }
+    75% { border-color: hsl(270, 100%, 50%); }
+    100% { border-color: hsl(360, 100%, 50%); }
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  
+  .avatar::before,
+  .avatar::after {
+    animation: pulse 3s linear infinite;
+    border: #fff solid 8px;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    content: ' ';
+    height: 140%;
+    left: -20%;
+    opacity: .6;
+    position: absolute;
+    top: -20%;
+    transform: scale(0.714);
+    width: 140%;
+    z-index: 1;
+  }
+  
+  .avatar::after {
+    animation-delay: 1s;
+  }
+
+  @media screen and (max-width: 768px) {
+    .page_container {
+        margin-top: 30vh;}
+    .row {
+        display: block;
+    }
+
+    .content {
+        text-align: center;
+        margin-top: 15vh;
+    }
+    .typing-demo {
+        text-align: center;
+        width: auto; /* Allow the width to auto-adjust on mobile */
+        margin: 0 auto;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    /* Adjust font size if needed to fit better on small screens */
+    .content h1 {
+        font-size: 1.4rem;
+        color: #ffb400;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        padding: 0;
+    }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%; /* Ensure the width adjusts dynamically on mobile */
+    }
+}
+
+

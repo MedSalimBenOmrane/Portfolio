@@ -5,7 +5,8 @@
     <span class="title-bg">WORKS</span>
     <div class="cardtab">
         <div class="row">
-            <div class="col-4 cards" *ngFor="let project of projects">
+            <div class="col-12 col-md-6 col-lg-4 cards" *ngFor="let project of projects">
+
                 <div style="display: flex">
                     <app-project-card [project]="project" (click)="openVerticallyCentered(content)"></app-project-card>
                 </div>
@@ -23,7 +24,7 @@
                         (click)="modal.dismiss('Cross click')"></button>
                 </div>
                 <div class="row">
-                    <div class="col-5" style="padding: 30px ; padding-left: 40px;">
+                    <div class="col-12 col-lg-5 " style="padding: 30px ; padding-left: 40px;">
                         <div class="row open-sans-font">
                             <div class="col-12 col-sm-6 mb-2">
                                 <b class="key">Project : </b>
@@ -61,7 +62,7 @@
                         
                         </div>
                     </div>
-                    <div class="col-7" style="padding: 30px ;padding-bottom:40px;">
+                    <div class="col-12 col-lg-7" style="padding: 30px ;padding-bottom:40px;">
                         <ngb-carousel>
 
 

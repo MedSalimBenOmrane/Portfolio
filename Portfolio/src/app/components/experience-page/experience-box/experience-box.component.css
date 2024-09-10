@@ -16,7 +16,7 @@
   font-size: 14px;
 }
 .vertical-line {
-  height: 60%;
+  height: 70%;
   margin: 0 33%;
   width: 1px; /* Adjust height of the vertical line */
   background-color: rgb(54, 54, 54);

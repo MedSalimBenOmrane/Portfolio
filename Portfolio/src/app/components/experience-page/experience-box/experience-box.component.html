@@ -12,9 +12,9 @@
       </div>
       <div class="row" style="margin-top: 18px">
         <h5>{{title}}</h5>
-        <p>
-        {{description}}
-        </p>
+        <ul>
+          <li *ngFor="let item of description">{{ item }}</li>
+        </ul>
       </div>
     </div>
   </div>

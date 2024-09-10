@@ -17,7 +17,7 @@ h1 {
   line-height: 0.7;
   position: absolute;
   right: 0;
-  top: 7%;
+  top: 7vh;
   text-transform: uppercase;
   font-weight: 800;
   transform: translateY(-50%);
@@ -163,3 +163,12 @@ hr.separator {
   border-radius: 50%;
 
 }
+
+@media (max-width: 768px) {
+  
+.title-bg {
+  top:  3%;
+  ;
+  }
+}
+

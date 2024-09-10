@@ -1,17 +1,68 @@
-
-<div class="reveal fade-bottom">
-  <app-description-page></app-description-page>
+<div id="background">
+  <div id="circle">
+    <div id="circle-glow"></div>
+    <div id="circle-inner"></div>
+  </div>
 </div>
 
-<hr class="separator">
-<div class=" reveal fade-left">
+<div id="app">
+  <div id="nav">
+    <div id="nav-items">
+      <!-- Redirection vers chaque section avec des ancres -->
+      <div class="nav-item">
+        <a href="#app-test" class="nav-link" id="test-link">
+          <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#about-me" class="nav-link" id="about-link">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#experience-page" class="nav-link" id="experience-link">
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#projects" class="nav-link" id="projects-link">
+          <i class="fa-solid fa-bolt"></i>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#contact-us" class="nav-link" id="contact-link">
+          <i class="fa-solid fa-comment"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sections de votre page, chaque section a un ID correspondant -->
+  <div id="app-test" class="test reveal fade-bottom">
+    <app-test></app-test>
+  </div>
+
+  <hr class="separator">
+
+  <div id="about-me" class="reveal fade-left">
     <app-about-me></app-about-me>
-</div>
-<hr class="separator" />
-<div class="reveal fade-left">
-  <app-experience-page></app-experience-page>
-</div>
-<hr class="separator" />
-<div class="reveal fade-left">
-  <app-projects></app-projects>
+  </div>
+
+  <hr class="separator" />
+
+  <div id="experience-page" class="reveal fade-left">
+    <app-experience-page></app-experience-page>
+  </div>
+
+  <hr class="separator" />
+
+  <div id="projects" class="reveal fade-left">
+    <app-projects></app-projects>
+  </div>
+
+  <hr class="separator" />
+
+  <div id="contact-us" class="reveal fade-bottom">
+    <app-contact-us></app-contact-us>
+  </div>
 </div>

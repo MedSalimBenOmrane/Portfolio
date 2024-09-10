@@ -1,8 +1,41 @@
+:root {
+  --light-blue: rgb(32, 18, 95);
+  --dark-blue: #cc64df;
+  --violet: rgb(119, 188, 236);
+  
+  --background-left: rgb(0, 0, 0);
+  --background-right: rgb(37, 28, 67);
+  
+  --conic-gradient: conic-gradient(
+    var(--dark-blue), 
+    var(--violet), 
+    var(--light-blue),
+    var(--dark-blue)
+  );
+}
 body {
   background-color: black;
   color: white;
+  
+    overflow-x: hidden;
+  
+}
+
+body::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: rgb(204, 204, 204);
+  visibility: hidden;
+}
+
+body:hover::-webkit-scrollbar-thumb{ 
+  visibility: visible;
 }
 .dark-modal .modal-content {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(23, 21, 21);
   border-radius: 30px;
 }

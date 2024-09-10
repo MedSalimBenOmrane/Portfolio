@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ExperienceBoxComponent {
   @Input()  title!:string;
   @Input()  periode!:string;
-  @Input()  description!:string;
+  @Input()  description!:string[];
 
 }
