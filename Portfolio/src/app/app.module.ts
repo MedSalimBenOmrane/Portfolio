@@ -15,6 +15,8 @@ import { ProjectCardComponent } from './components/projects/project-card/project
 import { TestComponent } from './components/test/test.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { WhatIOfferComponent } from './components/what-i-offer/what-i-offer.component';
+import { ListComponent } from './components/what-i-offer/list/list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     TestComponent,
     SkillsListComponent,
     ContactUsComponent,
+    WhatIOfferComponent,
+    ListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],

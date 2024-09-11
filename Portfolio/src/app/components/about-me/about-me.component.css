@@ -142,7 +142,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .info {
-    padding-left:20vw; /* Supprimer la marge gauche */
+    padding-left:5vw; /* Supprimer la marge gauche */
     margin-right: 0;
   }
 

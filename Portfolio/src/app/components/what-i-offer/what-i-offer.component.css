@@ -1,0 +1,11 @@
+.content{
+    padding: 2vh 2vw;
+    margin-top: 2vh;
+    backdrop-filter: blur(0.95vw);
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 1vw;
+}
+
+.container{
+    margin-top: 2vh;
+}
