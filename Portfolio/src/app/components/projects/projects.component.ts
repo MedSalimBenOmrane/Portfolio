@@ -20,7 +20,7 @@ export class ProjectsComponent {
         'https://github.com/MedSalimBenOmrane/Sonocure',
         'Conceived a non-invasive cancer detection solution using AI and sonogenetics, deployed on an Angular platform with AI models integrated via Flask for personalized care, Designed a UNet-based model for tumor segmentation in MRI images, achieving an average IoU/DICE score of 98.823 by leveraging a U-shaped architecture for precise size and location determination, Integrated a virtual assistant to respond to specific biology-related questions and provide real-time assistance.',
         ['thumbnail.jpg','image 1.png','image 2.png','image 3.png','image 4.png','image 5.png','image 6.png','image 7.png','image 8.png','image 9.png','image 10.png'],
-        ""
+        "https://www.youtube.com/embed/HcK686euC90?si=B56mm5BtsTEpz5sX"
         
       ),
       new project(
