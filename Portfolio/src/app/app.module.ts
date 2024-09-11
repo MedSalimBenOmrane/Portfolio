@@ -17,6 +17,7 @@ import { SkillsListComponent } from './components/skills-list/skills-list.compon
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { WhatIOfferComponent } from './components/what-i-offer/what-i-offer.component';
 import { ListComponent } from './components/what-i-offer/list/list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ListComponent } from './components/what-i-offer/list/list.component';
     WhatIOfferComponent,
     ListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
