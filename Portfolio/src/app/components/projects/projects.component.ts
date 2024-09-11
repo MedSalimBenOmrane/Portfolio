@@ -12,6 +12,17 @@ export class ProjectsComponent {
   path1:string="https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p";
   constructor(private modalService: NgbModal) {
     this.projects = [
+           new project(
+        'Sonocure',
+        'IA',
+        'Angular , next js ,Unet,Gemini,Rag',
+        '2024',
+        'https://github.com/MedSalimBenOmrane/Sonocure',
+        'Conceived a non-invasive cancer detection solution using AI and sonogenetics, deployed on an Angular platform with AI models integrated via Flask for personalized care, Designed a UNet-based model for tumor segmentation in MRI images, achieving an average IoU/DICE score of 98.823 by leveraging a U-shaped architecture for precise size and location determination, Integrated a virtual assistant to respond to specific biology-related questions and provide real-time assistance.',
+        ['thumbnail.jpg','image 1.png','image 2.png','image 3.png','image 4.png','image 5.png','image 6.png','image 7.png','image 8.png','image 9.png','image 10.png'],
+        ""
+        
+      ),
       new project(
         'PDF-CHATBOT',
         'IA',
@@ -23,6 +34,7 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/LbtcI1qF45Y?si=UZ4scBkNilv2ky8H"
         
       ),
+      
       new project(
         'Personality Detection system',
         'IA',
@@ -30,10 +42,22 @@ export class ProjectsComponent {
         '2024',
         'https://github.com/MedSalimBenOmrane/-Multimodal-Personality-Detection-system-PFA-',
         ' Designed a platform to scrape Instagram profiles using the provided URL, collecting posts, images, and captions for analysis.Utilized XLM-RoBERTa for text analysis and ViT for image feature extraction to predict user personalities. Generated visual representations of predicted personality traits. ',
-        ['thumbnail.jpg',],
+        ['thumbnail.jpg','image 1.jpg'],
         "https://www.youtube.com/embed/-mkCC6rJm-8?si=kVBp7AmM2vBfqKVu"
         
       ),
+      new project(
+        'YOLOv8-animal pose estimation',
+        'IA',
+        'Yolo V8m',
+        '2024',
+        'https://github.com/MedSalimBenOmrane/YOLOv8-animal-pose-estimation',
+        'We are fine-tuning YOLOv8m-pose, pre-trained for human pose estimation, for animal pose estimation using the MacaquePose dataset. This aims to enhance pose detection accuracy in animals.',
+        ['thumbnail.jpg','image 1.jpg'],
+        ""
+        
+      ),
+   
 
       new project(
         'Event Hub',
@@ -46,6 +70,18 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p"
         
       ),
+      new project(
+        'Emotion Detection',
+        'IA',
+        'CNN , OpenCV ,tensorflow',
+        '2024',
+        'https://github.com/MedSalimBenOmrane/YOLOv8-animal-pose-estimation',
+        'Developed a CNN-based system for real-time emotion detection from images, videos, and webcam feeds. Achieved 75% accuracy in detecting and classifying emotions for multiple faces simultaneously.',
+        ['thumbnail.jpg','image 1.jpg','image 2.jpg'],
+        ""
+        
+      ),
+ 
       new project(
         'Tic Tac Toe',
         'game dev',
