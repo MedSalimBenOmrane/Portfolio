@@ -40,7 +40,7 @@ h1 {
 }
 
 .cards {
-  padding: 2%;
+  margin-bottom: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +168,7 @@ hr.separator {
   
 .title-bg {
   top:  3%;
-  ;
+  
   }
 }
 

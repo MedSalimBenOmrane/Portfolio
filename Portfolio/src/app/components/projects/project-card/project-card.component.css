@@ -16,6 +16,7 @@
   max-width: 600px; /* Largeur maximale sur écrans larges */
   max-height: 375px; /* Hauteur maximale sur écrans larges */
   border-radius: 15px;
+  margin: 0 ;
   overflow: hidden;
   font-size: 14px;
   font-family: "Helvetica Nueue", Arial, Verdana, sans-serif;
@@ -140,7 +141,7 @@
 /* Pour les grands écrans */
 @media (min-width: 1025px) {
   #container {
-    width: 21.6vw; /* Largeur par défaut pour les grands écrans */
-    height: 12.5vw; /* Hauteur par défaut pour les grands écrans */
+    width: 17.7vw; /* Largeur par défaut pour les grands écrans */
+    height: 10vw; /* Hauteur par défaut pour les grands écrans */
   }
 }

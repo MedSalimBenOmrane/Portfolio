@@ -140,7 +140,7 @@ body {
   animation: pulse 10s ease-in-out infinite;
   background: var(--conic-gradient);
   border-radius: 100vh;
-  filter: blur(5vh);
+  filter: blur(1vh);
   height: 120%;
   opacity: 0.25;
   width: 120%;

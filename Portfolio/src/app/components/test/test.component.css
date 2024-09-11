@@ -74,7 +74,7 @@
 
 /* Typing animation */
 .typing-demo {
-    width: 29ch;
+    width: 27ch;
     animation: typing 4s steps(32), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -185,7 +185,7 @@
         width: 0;
     }
     to {
-        width: 70%; /* Ensure the width adjusts dynamically on mobile */
+        width: 60%; /* Ensure the width adjusts dynamically on mobile */
     }
 }
 
