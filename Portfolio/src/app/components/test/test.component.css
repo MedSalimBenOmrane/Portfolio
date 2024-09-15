@@ -80,12 +80,14 @@
     overflow: hidden;
     border-right: 2px solid;
     font-family: monospace;
+    animation-delay:2.9s ;
     
 }
 
 @keyframes typing {
     from {
         width: 0;
+        
     }
 }
 

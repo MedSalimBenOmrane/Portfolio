@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
   downloadPdf() {
-    const pdfUrl = 'assets/resume_Med_salim_ben_Omrane .pdf'; // Update with your local PDF file path
+    const pdfUrl = 'assets/Resume Ben Omrane Mohamed Salim .pdf'; // Update with your local PDF file path
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'resume Salim Ben Omrane.pdf';
+    link.download = 'Resume Ben Omrane Mohamed Salim .pdf';
     link.click();
     document.body.removeChild(link);
   }

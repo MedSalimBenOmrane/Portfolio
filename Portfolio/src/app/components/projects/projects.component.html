@@ -53,7 +53,7 @@
 
                             </p>
                         </div>
-                        <div class="row">
+                        <div *ngIf="project.pdfPath!==''" class="row">
                             <button class="cv" (click)="downloadPdf(project.title)">
                                  Download Repport
                               <span class="icon"><i class="bi bi-download"></i></span>
