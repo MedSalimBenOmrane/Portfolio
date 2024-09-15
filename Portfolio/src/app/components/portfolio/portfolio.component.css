@@ -6,6 +6,149 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.loader {
+  width: 8em;
+  height: 8em;
+  
+
+}
+.loadercontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 33rem; /* Adjust the space between the name and the loader */
+}
+
+.loader__eye1,
+  .loader__eye2,
+  .loader__mouth1,
+  .loader__mouth2 {
+  animation: eye1 3s ease-in-out infinite;
+}
+
+.loader__eye1,
+  .loader__eye2 {
+  transform-origin: 64px 64px;
+}
+
+.loader__eye2 {
+  animation-name: eye2;
+}
+
+.loader__mouth1 {
+  animation-name: mouth1;
+}
+
+.loader__mouth2 {
+  animation-name: mouth2;
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue), 90%, 10%);
+    --fg: hsl(var(--hue), 90%, 90%);
+  }
+}
+
+@keyframes eye1 {
+  from {
+    transform: rotate(-260deg) translate(0, -56px);
+  }
+
+  50%,
+    60% {
+    animation-timing-function: cubic-bezier(0.17, 0, 0.58, 1);
+    transform: rotate(-40deg) translate(0, -56px) scale(1);
+  }
+
+  to {
+    transform: rotate(225deg) translate(0, -56px) scale(0.35);
+  }
+}
+
+@keyframes eye2 {
+  from {
+    transform: rotate(-260deg) translate(0, -56px);
+  }
+
+  50% {
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+  }
+
+  52.5% {
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1, 0);
+  }
+
+  55%,
+    70% {
+    animation-timing-function: cubic-bezier(0, 0, 0.28, 1);
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+  }
+
+  to {
+    transform: rotate(150deg) translate(0, -56px) scale(0.4);
+  }
+}
+
+@keyframes eyeBlink {
+  from,
+    25%,
+    75%,
+    to {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes mouth1 {
+  from {
+    animation-timing-function: ease-in;
+    stroke-dasharray: 0 351.86;
+    stroke-dashoffset: 0;
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    stroke-dasharray: 175.93 351.86;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    animation-timing-function: steps(1, start);
+    stroke-dasharray: 175.93 351.86;
+    stroke-dashoffset: -175.93;
+    visibility: visible;
+  }
+
+  75%,
+    to {
+    visibility: hidden;
+  }
+}
+
+@keyframes mouth2 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+  }
+
+  50% {
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -351.86;
+  }
+}
+
+
+
 header {
   position: relative;
   left: 0;
@@ -19,6 +162,8 @@ header h4 {
   left: 10%;
   bottom: 1rem;
   font-size: 1.6rem;
+  font-weight: bolder;
+
 }
 
 /* Splash Screen */
@@ -62,76 +207,7 @@ header h4 {
   transition: ease-in-out 0.5s;
 }
 
-.pyramid-loader {
-  position: absolute; /* Changed to absolute to position it within the parent */
-  top: 50%; /* Adjusted to be directly under the name */
-  left: 50%;
-  transform: translate(-50%, -50%) rotateX(-20deg);
-  width: 300px;
-  height: 300px;
-  transform-style: preserve-3d;
-}
 
-.wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-
-.pyramid-loader .wrapper .side {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  transform-origin: center top;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
-.pyramid-loader .wrapper .side1 {
-  transform: rotateZ(-30deg) rotateY(90deg);
-  background: linear-gradient(to bottom right, #1afbf0, #da00ff);
-}
-
-.pyramid-loader .wrapper .side2 {
-  transform: rotateZ(30deg) rotateY(90deg);
-  background: linear-gradient(to bottom right, #1afbf0, #da00ff);
-}
-
-.pyramid-loader .wrapper .side3 {
-  transform: rotateX(30deg);
-  background: linear-gradient(to bottom right, #1afbf0, #da00ff);
-}
-
-.pyramid-loader .wrapper .side4 {
-  transform: rotateX(-30deg);
-  background: linear-gradient(to bottom right, #1afbf0, #da00ff);
-}
-
-.pyramid-loader .wrapper .shadow {
-  width: 60px;
-  height: 60px;
-  background: #8b5ad5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  transform: rotateX(90deg) translateZ(-40px);
-  filter: blur(12px);
-}
 
 @media (max-width: 768px) {
   .logo-header {
@@ -142,13 +218,10 @@ header h4 {
   }
   header h4 {
     font-size: 1.6rem;
+    font-weight:bolder;
     left: 0%;
   }
-  .pyramid-loader {
-    width: 200px; /* Smaller size for mobile */
-    height: 200px;
-    top: 60%; /* Adjusted for better positioning on mobile */
-  }
+
   .logo {
     margin: 0 2px;
   }
