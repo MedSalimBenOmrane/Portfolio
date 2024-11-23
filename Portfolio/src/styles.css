@@ -13,6 +13,7 @@
     var(--dark-blue)
   );
 }
+@import '~odometer/themes/odometer-theme-default.css'; /* Adjust path based on your structure */
 body {
   background-color: black;
   color: white;

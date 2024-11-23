@@ -18,6 +18,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { WhatIOfferComponent } from './components/what-i-offer/what-i-offer.component';
 import { ListComponent } from './components/what-i-offer/list/list.component';
 import { FormsModule } from '@angular/forms';
+import { AssociativeLifeComponent } from './components/associative-life/associative-life.component';
+import { SecurnitsComponent } from './components/associative-life/securnits/securnits.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { FormsModule } from '@angular/forms';
     ContactUsComponent,
     WhatIOfferComponent,
     ListComponent,
+    AssociativeLifeComponent,
+    SecurnitsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule,FormsModule],
   providers: [],

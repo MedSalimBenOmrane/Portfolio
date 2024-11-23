@@ -11,10 +11,14 @@ export class ExperiencePageComponent {
   constructor() {
     this.exps = [
       new Expinfo(
-        'Luxolor Boats (PART TIME JOB)',
+        'Luxolor Boats - Full-Stack Web Developer (Part-time)',
         '2023 - Present',
         [
-          'Production Methods Engineer: Defines, organizes, and optimizes processes and production resources for an industrial site.'
+          'Developed a web application for operators managing production team requests in collaboration with the purchasing department.',
+          'Designed features to track and report order statuses, ensuring efficient communication and transparency.',
+          'Built the frontend using Angular and the backend with Spring Boot, adhering to RESTful architecture.',
+          'Deployed the application using an automated CI/CD pipeline, ensuring fast and reliable delivery to production.',
+          'Enhancedsystem usability with an intuitive user interface and reliable backend integration.'
         ]
       ),
       new Expinfo(
