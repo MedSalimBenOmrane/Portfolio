@@ -1,0 +1,32 @@
+.icon-container {
+  width: 50px; /* Adjust the width and height as needed */
+  height: 50px; /* Adjust the width and height as needed */
+  background-color: #ffb400;
+  border-radius: 50%; /* To make it a circle */
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.385);
+  display: flex;
+  justify-content: center; /* To center horizontally */
+  align-items: center; /* To center vertically */
+  margin-top: 18px;
+}
+
+.period {
+  border-radius: 24px;
+  background-color: rgb(54, 54, 54);
+  font-size: 14px;
+}
+.vertical-line {
+  height: 70%;
+  margin: 0 33%;
+  width: 1px; /* Adjust height of the vertical line */
+  background-color: rgb(54, 54, 54);
+}
+
+#box{
+  transition: transform 0.5s ease;
+  
+}
+#box:hover{
+  transform: scale(1.1);  
+ 
+}

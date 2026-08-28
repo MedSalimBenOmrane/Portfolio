@@ -1,0 +1,182 @@
+#container {
+  padding-top: 1%;
+}
+
+span {
+  color: #ffb400;
+}
+
+/* ── Section titles ───────────────────────────────────────── */
+.section-title {
+  color: #ffb400;
+  margin: 48px 0 24px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ── Timeline wrapper ─────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding: 10px 0 40px;
+}
+
+/* Central vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateX(-50%);
+}
+
+/* ── Timeline entries ─────────────────────────────────────── */
+.tl-entry {
+  position: relative;
+  width: 50%;
+  padding-bottom: 44px;
+}
+
+/* Index even → card on the RIGHT side of center line */
+.tl-entry.tl-right {
+  margin-left: 50%;
+  padding-left: 44px;
+  padding-right: 8px;
+}
+
+/* Index odd → card on the LEFT side of center line */
+.tl-entry.tl-left {
+  margin-left: 0;
+  padding-right: 44px;
+  padding-left: 8px;
+}
+
+/* Horizontal branch from center line to card */
+.tl-entry.tl-right::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 44px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.tl-entry.tl-left::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 44px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Orange dot on center line ────────────────────────────── */
+.tl-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #ffb400;
+  border-radius: 50%;
+  top: 29px;
+  z-index: 1;
+  box-shadow: 0 0 14px rgba(255, 180, 0, 0.7);
+}
+
+.tl-entry.tl-right .tl-dot {
+  left: -7px;
+}
+
+.tl-entry.tl-left .tl-dot {
+  right: -7px;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.tl-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tl-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 24px rgba(255, 180, 0, 0.15);
+}
+
+/* Orange icon circle */
+.tl-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ffb400;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.385);
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* Date badge */
+.tl-period {
+  display: inline-block;
+  border-radius: 24px;
+  background-color: rgb(54, 54, 54);
+  font-size: 14px;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.tl-card h5 {
+  margin: 10px 0 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.tl-card ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.tl-card ul li {
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Mobile: everything stacks on the left ────────────────── */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 22px;
+    transform: none;
+  }
+
+  .tl-entry,
+  .tl-entry.tl-right,
+  .tl-entry.tl-left {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+
+  .tl-entry.tl-right::before,
+  .tl-entry.tl-left::before {
+    left: 22px;
+    right: auto;
+    width: 38px;
+  }
+
+  .tl-entry .tl-dot,
+  .tl-entry.tl-right .tl-dot,
+  .tl-entry.tl-left .tl-dot {
+    left: 15px;
+    right: auto;
+  }
+}

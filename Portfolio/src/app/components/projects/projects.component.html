@@ -1,0 +1,131 @@
+
+
+<div class="container" id="container">
+    <h1>MY <span>PORTFOLIO</span></h1>
+    <span class="title-bg">WORKS</span>
+    <div class="cardtab">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 cards" *ngFor="let project of projects">
+
+                <div style="display: flex">
+                    <app-project-card [project]="project" (click)="openVerticallyCentered(content)"></app-project-card>
+                </div>
+      
+
+
+        <ng-template #content let-modal>
+            <div>
+                <div class="row" style="position: relative">
+                    <h4 class="modal-title" id="modal-basic-title">{{project.title}}</h4>
+                    <hr class="separator" />
+
+                    <button type="button" class="btn-close btn-close-white" aria-label="Close"
+                        style="position: absolute; right: 40px; top: 20px"
+                        (click)="modal.dismiss('Cross click')"></button>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-5 " style="padding: 30px ; padding-left: 40px;">
+                        <div class="row open-sans-font">
+                            <div class="col-12 col-sm-6 mb-2">
+                                <b class="key">Project : </b>
+                                <span class="ft-wt-600 uppercase">{{project.category}}</span>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2">
+                                <b class="key">Period :</b>
+                                <span class="ft-wt-600 uppercase">{{project.period}}</span>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2">
+                                <b class="key">tools : </b>
+                                <span class="ft-wt-600 uppercase">{{project.stack}}</span>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2" *ngIf="project.links">
+                                <b class="key">Preview :</b>
+                                <a class="preview-link" target="_blank" rel="noopener noreferrer nofollow"
+                                    href="{{project.links}}"
+                                    style="cursor: none; color: #ffffff">link</a>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2" *ngIf="project.githubLinks && project.githubLinks.length > 0">
+                                <b class="key">GitHub :</b>
+                                <ng-container *ngFor="let gh of project.githubLinks; let i = index">
+                                    <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="{{gh}}"
+                                        style="color: #ffb400; margin-right: 8px;">
+                                        <i class="fa-brands fa-github"></i>
+                                        {{project.githubLinks.length > 1 ? (i === 0 ? 'Frontend' : 'Backend') : 'Repo'}}
+                                    </a>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div id="containerdesc">
+                            <p>
+                                <b class="key">Description: </b> {{project.description}} 
+
+
+                            </p>
+                        </div>
+                        <div *ngIf="project.pdfPath!==''" class="row">
+                            <button class="cv" (click)="downloadPdf(project.title, project.pdfPath)">
+                                 {{project.pdfLabel}}
+                              <span class="icon"><i class="bi bi-download"></i></span>
+                            </button>
+                          </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7" style="padding: 30px; padding-bottom:40px;">
+                        <ngb-carousel>
+                            <!-- Afficher la vidéo uniquement si project.pathVid n'est pas vide -->
+                            <ng-template ngbSlide *ngIf="project.pathVid && project.pathVid !== ''">
+                                <div class="picsum-img-wrapper">
+                                    <div *ngIf="project.pathVid">
+                                        <div *ngIf="project.pathVid === 'https://www.youtube.com/embed/k3qTqowV-IA?si=nDMDqDgUL76ETPS3'">
+                                            <iframe height="375px" width="100%" style="border-radius: 24px;"
+                                                src="https://www.youtube.com/embed/k3qTqowV-IA?si=nDMDqDgUL76ETPS3" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <div *ngIf="project.pathVid === 'https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p'">
+                                            <iframe height="375px" width="100%" style="border-radius: 24px;"
+                                                src="https://www.youtube.com/embed/KnTs16PImcA?si=b4Ig_53-Ux-J-_4p" allowfullscreen></iframe>
+                                        </div>
+                                        <div *ngIf="project.pathVid === 'https://www.youtube.com/embed/uJyh1AMuxHc?si=b3cQgKbAqcaqZHIM'">
+                                            <iframe height="375px" width="100%" style="border-radius: 24px;"
+                                                src="https://www.youtube.com/embed/uJyh1AMuxHc?si=b3cQgKbAqcaqZHIM" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <div *ngIf="project.pathVid === 'https://www.youtube.com/embed/LbtcI1qF45Y?si=UZ4scBkNilv2ky8H'">
+                                            <iframe height="375px" width="100%" style="border-radius: 24px;"
+                                                src="https://www.youtube.com/embed/LbtcI1qF45Y?si=UZ4scBkNilv2ky8H" allowfullscreen></iframe>
+                                        </div>
+                                        <div *ngIf="project.pathVid === 'https://www.youtube.com/embed/-mkCC6rJm-8?si=kVBp7AmM2vBfqKVu'">
+                                            <iframe height="375px" width="100%" style="border-radius: 24px;"
+                                                src="https://www.youtube.com/embed/-mkCC6rJm-8?si=kVBp7AmM2vBfqKVu" allowfullscreen></iframe>
+                                        </div>
+                                        <div *ngIf="project.pathVid === 'https://www.youtube.com/embed/HcK686euC90?si=B56mm5BtsTEpz5sX'">
+                                            <iframe height="375px" width="100%" style="border-radius: 24px;"
+                                                src="https://www.youtube.com/embed/HcK686euC90?si=B56mm5BtsTEpz5sX" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </ng-template>
+                    
+                            <!-- Afficher uniquement les images lorsque project.pathVid est vide -->
+                            <ng-template ngbSlide *ngFor="let image of project.pathImage">
+                                <div class="picsum-img-wrapper">
+                                    <img src="assets/projects image/{{project.title}}/{{image}}" alt="Project Image Slide" />
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
+</div>
+</div>

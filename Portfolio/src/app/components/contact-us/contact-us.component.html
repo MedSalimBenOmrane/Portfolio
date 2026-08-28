@@ -1,0 +1,34 @@
+<div class="contact_us">
+  <div class="responsive-container-block container">
+    <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" class="form-box">
+      <div class="container-block form-wrapper">
+        <p class="text-blk contact-head">CONTACT <span style="color: #ffb400;">US</span></p>
+
+        <div class="responsive-container-block">
+          <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+            <p class="text-blk input-title">First Name</p>
+            <input class="input" name="FirstName" [(ngModel)]="contactFormModel.firstName" required>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <p class="text-blk input-title">Last Name</p>
+            <input class="input" name="LastName" [(ngModel)]="contactFormModel.lastName" required>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <p class="text-blk input-title">Email</p>
+            <input class="input" name="Email" [(ngModel)]="contactFormModel.email" required>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <p class="text-blk input-title">Phone No.</p>
+            <input class="input" name="PhoneNumber" [(ngModel)]="contactFormModel.phone" required>
+          </div>
+          <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+            <p class="text-blk input-title">Message</p>
+            <textarea class="textinput" name="Message" [(ngModel)]="contactFormModel.message" required></textarea>
+          </div>
+        </div>
+
+        <button class="submit-btn" type="submit" [disabled]="!contactForm.valid">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>

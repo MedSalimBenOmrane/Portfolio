@@ -1,0 +1,95 @@
+<div class="container" id="container">
+  <h1>ABOUT <span>ME</span></h1>
+  <span class="title-bg">RESUME</span>
+
+
+
+  <div class="row " >
+    <div class="info col-lg-12 md-12" style="margin-top: 5vh;">
+      <div class="row">
+      <h2 >PERSONAL INFO</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title">First Name:</span>
+            <span class="value">Mohamed Salim</span>
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title"> Last Name: </span>
+            <span class="value"> Ben Omrane </span>
+          </div>
+        </div> 
+      
+    
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title">  Nationality:  </span>
+            <span class="value">  Tunisian </span>
+          </div>
+        </div>  
+        
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title">  Age  </span>
+            <span class="value"> {{ calculateAge(birthDate) }} Years </span>
+          </div>
+        </div> 
+      </div>
+      <div class="row">
+         
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title"> Phone </span>
+            <span class="value"> +33 7 51 30 13 71 </span>
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-sm-12">
+          <div class="item">
+            <span class="title">  Languages:  </span>
+            <span class="value"> French, English, Arabic </span>
+          </div>
+        </div> 
+        <div class="col-lg-6 col-sm-12">
+          <div class="item">
+            <span class="title">  Email:  </span>
+            <span class="value"> benomrane.mohamedsalim@gmail.com </span>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="item">
+            <span class="title">  Location:  </span>
+            <span class="value"> Paris, France — Île-de-France </span>
+          </div>
+        </div>
+      </div>
+    
+     
+      <div class="row" >
+        <div class="button" (click)="downloadPdf()">
+          <a href="#" class="anchor">
+            <span>Download CV</span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <app-what-i-offer></app-what-i-offer>
+    <app-skills-list></app-skills-list>
+    <app-associative-life></app-associative-life>
+
+
+    
+
+
+       
+    
+  </div>
+</div>

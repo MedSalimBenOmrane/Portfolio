@@ -1,0 +1,147 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Conteneur général */
+.container {
+  width: 100%; /* Assurez-vous que le conteneur prend toute la largeur disponible */
+}
+
+/* Carte responsive */
+#container {
+  width: 21.6vw; /* Largeur proportionnelle à l'écran pour les grands écrans */
+  height: 12.5vw; /* Hauteur proportionnelle à l'écran pour les grands écrans */
+  max-width: 600px; /* Largeur maximale sur écrans larges */
+  max-height: 375px; /* Hauteur maximale sur écrans larges */
+  border-radius: 15px;
+  margin: 0 ;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: "Helvetica Nueue", Arial, Verdana, sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto; /* Centre horizontalement */
+  position: relative; /* Nécessaire pour le centrage des détails */
+  transition: transform 0.5s ease;
+}
+
+#container:hover {
+  transform: scale(1.05); /* Appliquez une mise à l'échelle au survol */
+  box-shadow: 0px 0px 10px rgba(255, 235, 187, 0.425);
+}
+
+/* Contenu */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Occupe toute la hauteur du conteneur */
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.content:hover .content-overlay {
+  opacity: 1;
+  border-radius: 15px;
+}
+
+/* Image */
+.content-image {
+  width: 100%; /* L'image occupe toute la largeur */
+  height: 100%; /* L'image occupe toute la hauteur de la carte */
+  object-fit: cover; /* L'image garde ses proportions et remplit la carte */
+}
+
+/* Détails centrés avec animation fade-in */
+.content-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.content:hover .content-details {
+  opacity: 1;
+}
+
+.content-details h4 {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+/* Fade-in animations */
+.fadeIn-bottom {
+  top: 80%;
+}
+
+.fadeIn-top {
+  top: 50%;
+}
+
+.fadeIn-left {
+  left: 20%;
+}
+
+.fadeIn-right {
+  left: 80%;
+}
+
+/* Titre centré avec animation */
+.container .title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Media Queries pour les tailles d'écran différentes */
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+  #container {
+    width: 80vw; /* Largeur de 60% de l'écran */
+    height: 45vw; /* Hauteur proportionnelle (gardant le ratio 16:9) */
+    max-width: none; /* Supprimer la largeur maximale pour les petits écrans */
+    max-height: none; /* Supprimer la hauteur maximale pour les petits écrans */
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+}
+
+/* Pour les tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #container {
+    width: 45vw; /* Ajuster la largeur à 45% pour les tablettes */
+    height: 25.31vw; /* Ajuster la hauteur pour maintenir le ratio */
+  }
+}
+
+/* Pour les grands écrans */
+@media (min-width: 1025px) {
+  #container {
+    width: 17.7vw; /* Largeur par défaut pour les grands écrans */
+    height: 10vw; /* Hauteur par défaut pour les grands écrans */
+  }
+}

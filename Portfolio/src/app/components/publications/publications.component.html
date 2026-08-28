@@ -1,0 +1,116 @@
+<div class="pub-section" id="container">
+  <h1>MY <span>PUBLICATIONS</span></h1>
+  <span class="title-bg">RESEARCH</span>
+
+  <div class="pub-list">
+    <div class="pub-card" *ngFor="let pub of publications">
+
+      <!-- ── Header row: MICCAI branding + status badges ── -->
+      <div class="pub-header">
+
+        <!-- Left: MICCAI badge (prominent) -->
+        <div class="miccai-badge">
+          <div class="miccai-logo-wrap">
+            <img src="assets/logos/miccai.png" alt="MICCAI" class="logo-img miccai-logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback miccai-fallback">MICCAI</span>
+          </div>
+          <div class="miccai-text">
+            <span class="miccai-conf">MICCAI</span>
+            <span class="miccai-year">{{ pub.year }}</span>
+          </div>
+        </div>
+
+        <!-- Right: small status badges -->
+        <div class="pub-badges">
+          <span class="badge-status accepted">
+            <i class="fa-solid fa-circle-check"></i> Accepted
+          </span>
+          <span class="badge-first">
+            <i class="fa-solid fa-star"></i> First Author
+          </span>
+        </div>
+      </div>
+
+      <!-- ── Title ── -->
+      <h2 class="pub-title">{{ pub.title }}</h2>
+
+      <!-- ── Authors ── -->
+      <p class="pub-authors">
+        <ng-container *ngFor="let author of pub.authors; let last = last">
+          <span [class.author-me]="author === pub.myName"
+                [class.author-other]="author !== pub.myName">{{ author }}</span><span
+            *ngIf="!last" class="author-sep">,&nbsp;</span>
+        </ng-container>
+      </p>
+
+      <!-- ── Venue line ── -->
+      <div class="pub-venue-line">
+        <i class="fa-solid fa-landmark"></i>
+        Medical Image Computing and Computer Assisted Intervention –
+        <strong>MICCAI 2026</strong>, Springer LNCS
+      </div>
+
+      <!-- ── Abstract ── -->
+      <div class="pub-abstract-wrap">
+        <div class="pub-abstract" [class.collapsed]="!pub.expanded">
+          <span class="abstract-label">Abstract — </span>{{ pub.abstract }}
+        </div>
+        <button class="btn-toggle" (click)="toggleAbstract(pub)">
+          {{ pub.expanded ? 'Show less ▲' : 'Read abstract ▼' }}
+        </button>
+      </div>
+
+      <!-- ── Institution logos ── -->
+      <div class="affiliations">
+        <div class="affil-item" title="Centre de Vision Numérique — Université Paris-Saclay, Inria, CentraleSupélec">
+          <img src="assets/logos/centralesupelec.png" alt="CentraleSupélec"
+               class="logo-img affil-logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+          <span class="affil-text-fallback">CentraleSupélec</span>
+        </div>
+        <div class="affil-divider"></div>
+        <div class="affil-item" title="Centre de Vision Numérique — CVN Lab">
+          <img src="assets/logos/cvn.png" alt="CVN Lab"
+               class="logo-img affil-logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+          <span class="affil-text-fallback">CVN Lab</span>
+        </div>
+        <div class="affil-divider"></div>
+        <div class="affil-item" title="Institut National des Sciences Appliquées et de Technologie — INSAT">
+          <img src="assets/logos/inria.png" alt="Inria"
+               class="logo-img affil-logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+          <span class="affil-text-fallback">Inria</span>
+        </div>
+        <div class="affil-divider"></div>
+        <div class="affil-item" title="AP-HP Hôpital Bicêtre">
+          <img src="assets/logos/aphp.png" alt="AP-HP"
+               class="logo-img affil-logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+          <span class="affil-text-fallback">AP-HP</span>
+        </div>
+        <div class="affil-divider"></div>
+        <div class="affil-item" title="INSAT — Université de Carthage">
+          <img src="assets/logos/insat.png" alt="INSAT"
+               class="logo-img affil-logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+          <span class="affil-text-fallback">INSAT</span>
+        </div>
+      </div>
+
+      <!-- ── Action links ── -->
+      <div class="pub-links">
+        <a *ngFor="let link of pub.links"
+           [href]="link.url"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="pub-link-btn">
+          <i [class]="link.icon"></i>
+          {{ link.label }}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

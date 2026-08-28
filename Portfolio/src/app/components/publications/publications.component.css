@@ -1,0 +1,382 @@
+/* ═══════════════════════════════════════════════
+   Layout
+═══════════════════════════════════════════════ */
+.pub-section {
+  min-height: 60vh;
+  padding-top: 6vh;
+  padding-bottom: 8vh;
+  position: relative;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+h1 span { color: #ffb400; }
+
+.title-bg {
+  font-size: 120px;
+  left: 0;
+  letter-spacing: 10px;
+  line-height: 0.7;
+  position: absolute;
+  right: 0;
+  top: 7vh;
+  text-transform: uppercase;
+  font-weight: 800;
+  transform: translateY(-50%);
+  color: hsla(0, 0%, 100%, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pub-list {
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ═══════════════════════════════════════════════
+   Card
+═══════════════════════════════════════════════ */
+.pub-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 180, 0, 0.18);
+  border-left: 5px solid #ffb400;
+  border-radius: 16px;
+  padding: 36px 40px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pub-card:hover {
+  box-shadow: 0 0 40px rgba(255, 180, 0, 0.1);
+  border-color: rgba(255, 180, 0, 0.5);
+}
+
+/* ═══════════════════════════════════════════════
+   Header: MICCAI + badges
+═══════════════════════════════════════════════ */
+.pub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* MICCAI badge — left, prominent */
+.miccai-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(0,102,180,0.18) 0%, rgba(255,180,0,0.08) 100%);
+  border: 1px solid rgba(0, 120, 215, 0.4);
+  border-radius: 14px;
+  padding: 10px 20px 10px 14px;
+}
+
+.miccai-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.miccai-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.miccai-fallback {
+  display: none;
+  background: linear-gradient(135deg, #0066b4, #00a0e3);
+  color: #fff;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.miccai-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.miccai-conf {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #0099e6, #00c3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.miccai-year {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 1px;
+}
+
+/* Right badges */
+.pub-badges {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.badge-status.accepted {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.badge-first {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(255, 180, 0, 0.1);
+  color: #ffb400;
+  border: 1px solid rgba(255, 180, 0, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* ═══════════════════════════════════════════════
+   Title & authors
+═══════════════════════════════════════════════ */
+.pub-title {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: 14px;
+  letter-spacing: 0.1px;
+}
+
+.pub-authors {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.author-me {
+  color: #ffb400;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.author-other { color: rgba(255,255,255,0.65); }
+
+.author-sep { color: rgba(255,255,255,0.35); }
+
+/* ═══════════════════════════════════════════════
+   Venue line
+═══════════════════════════════════════════════ */
+.pub-venue-line {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 22px;
+  letter-spacing: 0.2px;
+}
+
+.pub-venue-line i {
+  color: #ffb400;
+  margin-right: 5px;
+}
+
+.pub-venue-line strong {
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════
+   Abstract
+═══════════════════════════════════════════════ */
+.pub-abstract-wrap { margin-bottom: 28px; }
+
+.pub-abstract {
+  background: rgba(0,0,0,0.22);
+  border-left: 3px solid rgba(255,180,0,0.4);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+}
+
+.pub-abstract.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.abstract-label {
+  color: #ffb400;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  color: #ffb400;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 0 0;
+  letter-spacing: 0.4px;
+  transition: opacity 0.2s;
+}
+.btn-toggle:hover { opacity: 0.7; }
+
+/* ═══════════════════════════════════════════════
+   Institution logos
+═══════════════════════════════════════════════ */
+.affiliations {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 16px 24px;
+}
+
+.affil-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: default;
+}
+
+.affil-logo {
+  height: 32px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.affil-logo:hover { opacity: 1; }
+
+.affil-text-fallback {
+  display: none;
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.affil-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   Action links
+═══════════════════════════════════════════════ */
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pub-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255,180,0,0.45);
+  color: #ffb400;
+  background: rgba(255,180,0,0.06);
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  letter-spacing: 0.3px;
+}
+
+.pub-link-btn:hover {
+  background: #ffb400;
+  color: #000;
+  border-color: #ffb400;
+}
+
+/* ═══════════════════════════════════════════════
+   Responsive
+═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+
+  .title-bg {
+    font-size: 55px;
+    top: 3%;
+  }
+
+  .pub-list {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 20%;
+  }
+
+  .pub-card { padding: 22px 18px; }
+
+  .pub-header { flex-direction: column; align-items: flex-start; }
+
+  .miccai-badge { width: 100%; }
+
+  .pub-title { font-size: 17px; }
+
+  .affiliations { gap: 8px; padding: 12px 16px; }
+
+  .affil-item { padding: 0 10px; }
+
+  .affil-divider { display: none; }
+}

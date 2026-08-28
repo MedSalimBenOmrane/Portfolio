@@ -1,0 +1,46 @@
+<div class="container" id="container">
+  <h2 style="margin-top: 30px; text-align: center;">EXPERIENCE <span>&</span> EDUCATION</h2>
+  <h5 style="text-align: center; color: rgba(255, 255, 255, 0.726); margin-bottom: 40px;">My journey in the academic & professional front</h5>
+
+  <h3 class="section-title">Experiences</h3>
+  <div class="timeline">
+    <div
+      class="tl-entry"
+      *ngFor="let exp of exps; let i = index"
+      [ngClass]="i % 2 === 0 ? 'tl-right' : 'tl-left'"
+    >
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-icon">
+          <i class="bi bi-briefcase-fill"></i>
+        </div>
+        <div class="tl-period">{{ exp.date }}</div>
+        <h5>{{ exp.title }}</h5>
+        <ul>
+          <li *ngFor="let item of exp.desc">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="section-title">Education</h3>
+  <div class="timeline">
+    <div
+      class="tl-entry"
+      *ngFor="let edu of education; let i = index"
+      [ngClass]="i % 2 === 0 ? 'tl-right' : 'tl-left'"
+    >
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-icon">
+          <i class="bi bi-mortarboard-fill"></i>
+        </div>
+        <div class="tl-period">{{ edu.date }}</div>
+        <h5>{{ edu.title }}</h5>
+        <ul>
+          <li *ngFor="let item of edu.desc">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

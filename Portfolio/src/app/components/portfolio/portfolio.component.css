@@ -1,0 +1,691 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.loader {
+  width: 8em;
+  height: 8em;
+  
+
+}
+.loadercontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 33rem; /* Adjust the space between the name and the loader */
+}
+
+.loader__eye1,
+  .loader__eye2,
+  .loader__mouth1,
+  .loader__mouth2 {
+  animation: eye1 3s ease-in-out infinite;
+}
+
+.loader__eye1,
+  .loader__eye2 {
+  transform-origin: 64px 64px;
+}
+
+.loader__eye2 {
+  animation-name: eye2;
+}
+
+.loader__mouth1 {
+  animation-name: mouth1;
+}
+
+.loader__mouth2 {
+  animation-name: mouth2;
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue), 90%, 10%);
+    --fg: hsl(var(--hue), 90%, 90%);
+  }
+}
+
+@keyframes eye1 {
+  from {
+    transform: rotate(-260deg) translate(0, -56px);
+  }
+
+  50%,
+    60% {
+    animation-timing-function: cubic-bezier(0.17, 0, 0.58, 1);
+    transform: rotate(-40deg) translate(0, -56px) scale(1);
+  }
+
+  to {
+    transform: rotate(225deg) translate(0, -56px) scale(0.35);
+  }
+}
+
+@keyframes eye2 {
+  from {
+    transform: rotate(-260deg) translate(0, -56px);
+  }
+
+  50% {
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+  }
+
+  52.5% {
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1, 0);
+  }
+
+  55%,
+    70% {
+    animation-timing-function: cubic-bezier(0, 0, 0.28, 1);
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+  }
+
+  to {
+    transform: rotate(150deg) translate(0, -56px) scale(0.4);
+  }
+}
+
+@keyframes eyeBlink {
+  from,
+    25%,
+    75%,
+    to {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes mouth1 {
+  from {
+    animation-timing-function: ease-in;
+    stroke-dasharray: 0 351.86;
+    stroke-dashoffset: 0;
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    stroke-dasharray: 175.93 351.86;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    animation-timing-function: steps(1, start);
+    stroke-dasharray: 175.93 351.86;
+    stroke-dashoffset: -175.93;
+    visibility: visible;
+  }
+
+  75%,
+    to {
+    visibility: hidden;
+  }
+}
+
+@keyframes mouth2 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+  }
+
+  50% {
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -351.86;
+  }
+}
+
+
+
+header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10%;
+}
+
+header h4 {
+  position: absolute;
+  left: 10%;
+  bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
+
+}
+
+/* Splash Screen */
+.intro {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transition: 1s;
+}
+
+.logo-header {
+  position: absolute;
+  top: 40%; /* Adjusted to create space above the pyramid */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffffea;
+  text-align: center;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  margin-left: 10px;
+}
+
+.logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+
+
+@media (max-width: 768px) {
+  .logo-header {
+    font-size: 1rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header h4 {
+    font-size: 1.6rem;
+    font-weight:bolder;
+    left: 0%;
+  }
+
+  .logo {
+    margin: 0 2px;
+  }
+}
+
+
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }   
+
+  hr.separator {
+    border-top: 1px solid #ffffffea;
+    margin: 70px auto 55px;
+    max-width: 40%;
+    z-index: 100;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+
+:root {
+  --light-blue: rgb(32, 18, 95);
+  --dark-blue: #ffb400;
+  --violet: rgb(119, 188, 236);
+  
+  --background-left: rgb(29, 33, 68);
+  --background-right: rgb(30, 25, 47);
+  
+  --conic-gradient: conic-gradient(
+    var(--dark-blue), 
+    var(--violet), 
+    var(--light-blue),
+    var(--dark-blue)
+  );
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  from, 20%, 40%, 80%, to {
+    transform: scale(1);
+  }
+  
+  10%, 60% {
+    transform: scale(1.1);
+  }
+}
+
+body {
+  background: linear-gradient(
+    to right, 
+    var(--background-left), 
+    var(--background-right)
+  );
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+#background {
+  display: grid;
+  inset: 0px;  
+  place-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+#circle {
+  animation: rotate 10s linear infinite;
+  background: var(--conic-gradient);
+  border-radius: 70vh;
+  display: grid;
+  filter: blur(4vh);
+  height: 70vh;
+  place-items: center;
+  position: relative;
+  width: 70vh;
+}
+
+#circle-inner {
+  border-radius: inherit;
+  inset: 5%;
+  position: absolute;
+}
+
+#circle-glow {
+  animation: pulse 10s ease-in-out infinite;
+  background: var(--conic-gradient);
+  border-radius: 100vh;
+  filter: blur(1vh);
+  height: 120%;
+  opacity: 0.25;
+  width: 120%;
+  z-index: 2;
+}
+
+#circle-inner {
+  background: linear-gradient(
+    to right, 
+    var(--background-left), 
+    var(--background-right)
+  );
+  z-index: 3;
+}
+
+.test{
+  margin-left: 5%;
+
+}
+#app {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  position: relative;
+  width: 100vw;
+  z-index: 2;
+}
+
+#nav {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 120px;
+}
+
+#nav-items {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 120px;
+}
+
+#nav-items > .nav-item {
+  border-radius: 6px;
+  cursor: pointer;
+  display: grid;
+  height: 100px;
+  place-items: center;
+  transition: background-color 250ms;
+  width: 100px;
+}
+
+#nav-items > .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.162);
+}
+
+#nav-items > .nav-item:hover > i {
+  color: rgba(255, 255, 255, 0.9); 
+}
+
+#nav-items > .nav-item > i {
+  color: rgba(255, 255, 255, 0.697); 
+  font-size: 2.5em;
+  transition: color 250ms;
+}
+
+
+  
+#profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(10px, 0.8vw, 20px);
+  justify-content: center;
+  margin-left: 80px;
+  width: clamp(600px, 80vw, 1400px);
+}
+
+#profiles > .profile {
+  aspect-ratio: 7 / 8;
+  backdrop-filter: blur(0.75vw);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 1vw;
+  cursor: pointer;
+  transition: background-color 250ms;
+  width: calc(25% - clamp(10px, 0.8vw, 20px));
+}
+
+#profiles > .profile:hover {
+  backdrop-filter: blur(1vw);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile > .profile-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - clamp(8px, 1vw, 12px));
+  justify-content: center;
+  padding: clamp(8px, 1vw, 12px);
+}
+
+.profile > .profile-content > .profile-pic {
+  aspect-ratio: 1;
+  border: clamp(3px, 0.4vw, 5px) solid white;
+  border-radius: 100%;
+  flex-shrink: 0;
+  height: 70%;
+  position: relative;
+}
+
+.profile > .profile-content > .profile-pic > .profile-pic-image {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 100%;
+  height: calc(100% - clamp(10px, 1.5vw, 20px));
+  margin: clamp(5px, 0.75vw, 10px);
+  object-fit: cover;
+  width: calc(100% - clamp(10px, 1.5vw, 20px));
+}
+
+.profile > .profile-content > .profile-name {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: clamp(1em, 2vw, 2em);
+  margin: 0px;
+  text-align: center;
+}
+
+@media(max-width: 1200px), (max-height: 900px) { 
+  #nav {
+    width: 80px;
+  }
+
+  #nav-items {
+    gap: 5px;
+    width: 80px;
+  }
+
+  #nav-items > .nav-item {
+    border-radius: 6px;
+    height: 60px;
+    width: 60px;
+  }
+
+  #nav-items > .nav-item > i {
+    font-size: 1.5em;
+  }
+}
+
+/* -- YouTube Link Styles -- */
+
+#youtube-link {
+  bottom: 10px;
+}
+
+#youtube-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.link > i, .link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  /* Position the navbar at the bottom */
+  #nav {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    justify-content: space-around;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7); /* Slight background for visibility */
+  }
+
+  /* Adjust nav-items for mobile */
+  #nav-items {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  /* Adjust the size of each nav item */
+  #nav-items > .nav-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Adjust icon size */
+  #nav-items > .nav-item > i {
+    font-size: 1.5em;
+  }
+  
+  /* Hide the background circle and glow on mobile for better performance */
+  #background {
+    display: none;
+  }
+
+  /* Adjust body padding to avoid overlapping content with the navbar */
+  body {
+    padding-bottom: 60px; /* Same height as the navbar */
+  }
+}
+
+/* Base styles for background circle */
+#background {
+  display: grid;
+  inset: 0;  
+  place-items: center;
+  position: fixed;
+  z-index: 1;
+  pointer-events: none; /* Prevent interaction with the background */
+}
+
+#circle {
+  animation: rotate 10s linear infinite;
+  background: var(--conic-gradient);
+  border-radius: 70vh;
+  display: grid;
+  filter: blur(4vh);
+  height: 70vh;
+  place-items: center;
+  position: relative;
+  width: 70vh;
+}
+
+#circle-inner {
+  border-radius: inherit;
+  inset: 5%;
+  position: absolute;
+  z-index: 3;
+}
+
+#circle-glow {
+  animation: pulse 10s ease-in-out infinite;
+  background: var(--conic-gradient);
+  border-radius: 100vh;
+  filter: blur(5vh);
+  height: 120%;
+  opacity: 0.25;
+  width: 120%;
+  z-index: 2;
+}
+
+#circle-inner {
+  background: linear-gradient(
+    to right, 
+    var(--background-left), 
+    var(--background-right)
+  );
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  #circle {
+    height: 50vh; /* Reduce size for mobile */
+    width: 50vh;
+  }
+
+  #circle-glow {
+    height: 80%;
+    width: 80%;
+    filter: blur(3vh); /* Adjust blur for mobile */
+  }
+  
+  #circle-inner {
+    inset: 10%; /* Slightly increase the inner circle size on mobile */
+  }
+  
+  /* For very small screens, further reduce the size */
+  @media (max-width: 500px) {
+    #circle {
+      height: 40vh;
+      width: 40vh;
+    }
+
+    #circle-glow {
+      height: 70%;
+      width: 70%;
+      filter: blur(2vh); /* Reduce blur to fit smaller screens */
+    }
+  }
+}
+
+
